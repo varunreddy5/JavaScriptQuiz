@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>JavaScript Quiz</title>
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<!-- Optional theme -->
+	<link rel="stylesheet" href="css/bootstrap-theme.min.css">
+	<!--CSS Link-->
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+	<div class="container">
+		<div id="totalQuizDiv">
+			<p class="header">Welcome to the Quiz</p>
+			<div class="row">
+				<div class="col-sm-12 col-xs-12 question">
+					<p id="questionNumber">Question...</p>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-sm-6 col-xs-12 options">
+					<a data-id="1" class="btn answer">Answer...</a>
+				</div>
+
+				<div class="col-sm-6 col-xs-12 options">
+					<a data-id="2" class="btn answer">Answer...</a>
+				</div>
+
+				<div class="col-sm-6 col-xs-12 options">
+					<a data-id="3" class="btn answer">Answer...</a>
+				</div>
+
+				<div class="col-sm-6 col-xs-12 options">
+					<a data-id="4" class="btn answer">Answer...</a>
+				</div> 	
+			</div>
+			<div class="row">
+				<div class="col-xs-4 prev">
+					<button id="prev-button" class="btn btn-primary page-movement">Prev</button>
+				</div>
+
+				<div class="col-xs-4 col-xs-offset-4 next">
+					<button id="next-button" class="btn btn-primary pull-right page-movement">Next</button>
+				</div>
+			</div>
+			<div class="row">
+				<button id="submitButton" class="btn btn-success">Submit</button>
+			</div>
+			
+				<div class="progress">
+  					<div id="progressbar" class="progress-bar progress-bar-striped progress-bar-success active" role="progressbar" aria-valuenow="45" aria-valuemin="0" aria-valuemax="100" style="width: 0%">
+    				<span class="sr-only">45% Complete</span>
+ 			 		</div>
+				</div>
+			
+		
+		</div>
+				<div id="result" class="resultSytle">
+				
+				
+				</div>
+		
+	</div>
+	<!--JavaScript Link-->
+	<script type="text/javascript" src="js/script.js"></script>
+	<!-- Latest compiled and minified JavaScript -->
+	<script src="js/bootstrap.min.js">
+</body>
+</html>
