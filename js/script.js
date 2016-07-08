@@ -10,7 +10,9 @@ var answers=document.getElementsByClassName("answer");
 var prev=document.getElementById("prev-button");
 var next=document.getElementById("next-button");
 var myProgress=document.getElementById("progressbar");
+var progressDisplay=document.getElementsByClassName("progress");
 var totalQuizHide=document.getElementById("totalQuizDiv");
+var header=document.getElementById("header");
 var submitBut=document.getElementById("submitButton");
 var resultPage=document.getElementById("result");
 var currentQuestion=0;
@@ -25,8 +27,10 @@ next.addEventListener('click',nextPage);
 prev.addEventListener('click',prevPage);
 submitBut.addEventListener('click',endQuiz);
 function nextPage(){
+
 	if(totalCorrectAns[currentQuestion]){
 		if (currentQuestion<myQuiz.length-1) {
+			
 			currentQuestion++;
 			console.log(currentQuestion);
 			checkPage(currentQuestion);
@@ -40,8 +44,10 @@ function nextPage(){
 
 function checkPage(currentQuestion){
 	if (currentQuestion==0) {
-		prev.style.visibility="hidden";
-		next.style.visibility="visible";
+		// prev.style.visibility="hidden";
+		prev.disabled=true;
+		// next.style.visibility="visible";
+		next.disabled=false;
 		myQuestion.innerHTML=myQuiz[currentQuestion][0];
 		for(var i=0;i<myQuiz[currentQuestion].length-2;i++){
 			answers[i].innerHTML=myQuiz[currentQuestion][i+1];
@@ -49,8 +55,10 @@ function checkPage(currentQuestion){
 			addStyle();
 		}
 	else{
-			prev.style.visibility="visible";
-			next.style.visibility="visible";
+			// prev.style.visibility="visible";
+			prev.disabled=false;
+			// next.style.visibility="visible";
+			next.disabled=false;
 			myQuestion.innerHTML=myQuiz[currentQuestion][0];
 			for(var i=0;i<myQuiz[currentQuestion].length-2;i++){
 			answers[i].innerHTML=myQuiz[currentQuestion][i+1];
@@ -58,7 +66,8 @@ function checkPage(currentQuestion){
 			addStyle();
 		
 			if (currentQuestion==myQuiz.length-1) {
-				next.style.visibility="hidden";
+				// next.style.visibility="hidden";
+				next.disabled=true;
 				submitBut.style.display="block";
 			}	
 	}
@@ -89,9 +98,11 @@ function addStyle(){
 	for(var i=0;i<answers.length;i++){
 		if(totalCorrectAns[currentQuestion]==(i+1)){
 			answers[i].classList.add("selectAnswer");
+			answers[i].style.color="white";
 		}
 		else{
 			answers[i].classList.remove("selectAnswer");
+			answers[i].style.color="black";
 		}	
 	}
 }
@@ -103,6 +114,8 @@ function endQuiz(){
 		console.log("The quiz is over");
 		
 		totalQuizHide.style.display="none";
+		header.style.visibility="hidden";
+
 		output='<div><br><h3>Quiz Result:</h3><br></div>';
 		for(var i=0;i<myQuiz.length;i++){
 			if(totalCorrectAns[i]==myQuiz[i][5]){

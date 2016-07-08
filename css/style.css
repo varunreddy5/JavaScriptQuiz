@@ -1,18 +1,36 @@
-.container{
-	border: 1px solid #e0e0d1;
-	padding: 0;
+body {
+	/*font-family: 'Sintony', sans-serif;*/
+	/*font-family: 'Open Sans',sans-serif;*/
+	font-family: 'Titillium Web', sans-serif;
+	background-image: url("../img/quiz-bg-3.jpg");
+	background-repeat: no-repeat;
+
+
+}
+
+#totalQuizDiv{
+	margin-top: 50px;
 }
 .header{
-	margin-left: 50px;
-	font-size: 28px;
+
+   font: 400 100px/1.5 'Pacifico', Helvetica, sans-serif;
+  color: #2b2b2b;
+  text-shadow: 3px 3px 0px rgba(0,0,0,0.1), 7px 7px 0px rgba(0,0,0,0.05);
+  /*font: 400 130px/0.8 'Great Vibes', Helvetica, sans-serif;
+  color: #2b2b2b;
+  text-shadow: 4px 4px 3px rgba(0,0,0,0.1); */
+	margin-top: 100px;
+	font-size: 35px;
+	/*font-weight: bold;*/
 }
 #questionNumber{
 	margin-left: 50px;
 	font-size: 23px;
+	font-weight: bold;
 }
 
 .answer{
-	background-color: white;
+	background-color: transparent;
 	color: black
 
 	padding: 6px;
@@ -33,6 +51,12 @@
 
 .progress{
 	margin-top: 25px;
+
+}
+#next-button,#prev-button{
+	background-color: #107896;
+	color: white;
+	font-weight: bold;
 }
 #submitButton{
 	display: none;
@@ -42,7 +66,8 @@
 	margin-left: 15px;
 }
 .selectAnswer{
-	background-color: #2db300;
+	background-color: #0D3D56;
+
 
 }
 .hide{
