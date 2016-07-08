@@ -1,7 +1,7 @@
 var myQuiz=[
-["What is the capital of Karnataka ?","Mysore","Bangalore","Hubli","None of the above",2],
+["How do you create a function in JavaScript?","function = myFunction()","function myFunction","function myFunction()","None of the above",3],
 ["DOM stands for ?","Data Object Model" ,"Document Object Model","Data Object Machine","None of the above",2],
-["Who is the president of India ?","Pranab Mukherjee" ,"Prathibha Patel","Prudhviraj Chauhan","None",1],
+['How do you call a function named "myFunction"?',"call myFunction()" ,"myFunction()","call function myFunction()","None of the above",2],
 ["Which of the following is an Object ?","var","number","array","undefined",3]
 ];
 var container=document.getElementsByClassName("container");
@@ -110,6 +110,7 @@ function addStyle(){
 function endQuiz(){
 	var counter=0;
 	var output="";
+	
 	if (totalCorrectAns[currentQuestion]) {
 		console.log("The quiz is over");
 		
